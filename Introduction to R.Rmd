@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R Programming"
-author: "Sana Rasheed"
-date: "May 14, 2020"
+author: "Muhammad Shahzad"
+date: "Nov 24, 2021"
 output: html_document
 ---
 
@@ -26,25 +26,44 @@ output: html_document
 #### Start solution ####
 ```
 
+name_char <- c('S','H','A','H','Z','A','D')
+
+```{r }
+
+```
+name <- paste(name_char, collapse ='')
+name 
+
+
 
 ```{r }
 
 ```
 
 
-```{r }
-
-```
-
+seq_var <- 100:120
+seq_var
 
 ```{r }
 
 ```
 
+mymat <- matrix(seq(2,18, by =2),nrow=3,ncol=3)
+mymat
+
+
 
 ```{r }
 
 ```
+
+nameA = name_char
+nameB = name 
+nameC = seq_var
+nameD = mymat
+
+
+
 
 
 ```{r }
