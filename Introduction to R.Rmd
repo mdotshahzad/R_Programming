@@ -82,6 +82,20 @@ nameD = mymat
 ```
 
 
+
+
+my_fact <- factor(c("Employed","Unemployed","Self-Employed","Self-Employed","Employed","Unemployed","Unemployed","Employed"))
+
+my_fact
+
+
+unclass(my_fact)
+
+
+
+
+
+
 ```{r }
 
 ```
@@ -118,16 +132,47 @@ nameD = mymat
 #### Start solution ####
 ```
 
+bank_customers <- data.frame( CustomerID = 1:5, hasAccount= c(F,T,T,T,F), totalBalance = c(NA,10000,10,2000,NA)  )
+
+
+bank_customers
+
+
+row.names(bank_customers) <- c('Alicia','Nancy','Fernando','Louis','Diane')
+bank_customers
+
+
+bank_customers$totalBalance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```{r }
 
 ```
 
 
+nrow(bank_customers)
+
+
 ```{r }
 
 ```
 
+
+ncol(bank_customers)
 
 ```{r }
 
