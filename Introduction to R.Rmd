@@ -206,9 +206,85 @@ ncol(bank_customers)
 ```
 
 
+
+num1 =1:100
+print(num1)
+
+ 
+  for (i in num1) {
+  flag =T
+  count <- 2 
+    while (count < i){
+    if (i %% count == 0) {
+     flag =F
+     
+    }
+      
+         count = count +1
+         
+    }
+    
+    if (flag ==T) {
+
+    print(i)    
+
+    }
+  i=i+1
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```{r }
 
 ```
+
+**Create a variable var with a value of 1:**  
+1. Create a while loop and increase the value of var at each iteration.   
+2. When you reach the 10th prime number, terminate the loop and print the number.  
+
+
+num1 =1:100
+var = 1
+for (i in num1) {
+  flag =T
+  count <- 2 
+  while (count < i){
+    if (i %% count == 0) {
+      flag =F
+    }
+    count = count +1
+  }
+  if (flag ==T) {
+    while ( var < 11 ) {
+      print(i)
+      var=var+1
+      break
+    }
+
+  }
+  i=i+1
+  
+}
+
+
+
+
+
+
+
+
 
 
 ```{r }
@@ -243,6 +319,27 @@ ncol(bank_customers)
 ```{r }
 #### Start solution ####
 ```
+
+
+
+
+mat_1 <- matrix(1:9,3,3)
+mat_1
+for (i in 
+     seq_len(nrow(mat_1))) {
+  for (j in 
+       seq_len(ncol(mat_1))) {
+    print(mat_1[j,i])
+    print(which(mat_1==mat_1[j,i],arr.ind = TRUE))
+  }
+}
+
+
+
+
+
+
+
 
 
 ```{r }
