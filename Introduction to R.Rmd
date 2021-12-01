@@ -386,6 +386,26 @@ for (i in
 #### Start solution ####
 ```
 
+gcd <- function(a,b) {
+  
+  if ( a > b ) {
+    max_num = a
+    }
+    else {
+      max_num = b
+    }
+  for (i in 1:max_num) {
+  if ((a %% i == 0) && (b %% i == 0)) {
+    answer = i
+  }
+}
+  return(answer)
+}
+
+
+answer <- gcd(10, 12)
+answer
+
 
 ```{r }
 
@@ -427,6 +447,22 @@ for (i in
 ```{r }
 #### Start solution ####
 ```
+
+
+
+allConditionsMeet <- function(a,b) {
+  if ((a == T) && (b == T)) {
+    return(T)
+  }
+  else {
+    return(F)
+  }
+  
+}
+
+
+allConditionsMeet(T,T)
+allConditionsMeet(T,F)
 
 
 ```{r }
@@ -476,9 +512,41 @@ for (i in
 ```
 
 
+
+
+
+
+matrix_1 = c(matrix(1:6, nrow=2, ncol=3))
+matrix_1
+matrix_2 = c(matrix(7:12, nrow=3, ncol=2))
+matrix_2
+matrix_1 * matrix_2 
+
+matrix_1 = matrix(1:6, nrow=2, ncol=3)
+matrix_1
+matrix_2 = matrix(7:12, nrow=3, ncol=2)
+matrix_2
+matrix_1 * matrix_2 
+matrix_1 %*% matrix_2
+
+
+
 ```{r }
 
 ```
+
+
+
+deter <- function(a,b,c,d){
+  my_mat <- matrix(c(a,b,c,d))
+  detr <- (a*d) - (b*c)
+  return(detr)
+}
+
+
+
+deter
+
 
 
 ```{r }
@@ -520,6 +588,32 @@ for (i in
 ```
 
 
+
+
+curr_date <- Sys.Date()
+curr_date
+curr_time <- Sys.time()
+curr_time
+
+class(curr_date)
+class(curr_time)
+curr_date <- as.POSIXlt(curr_date)
+curr_time <- as.POSIXlt(curr_time)
+curr_time
+curr_date
+
+names(unclass(curr_time))
+
+curr_time$wday
+curr_time$year
+curr_time$sec
+curr_time$hour
+
+
+
+
+
+
 ```{r }
 
 ```
@@ -558,6 +652,20 @@ for (i in
 ```{r }
 #### Start solution ####
 ```
+
+
+
+
+
+curr_time <- as.POSIXct(Sys.time())
+curr_time
+
+gmt_currtime <- as.POSIXct("2021-12-01 05:36:29" ,tz = 'GMT')
+gmt_currtime
+
+curr_time - gmt_currtime
+
+
 
 
 ```{r }
