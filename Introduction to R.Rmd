@@ -712,6 +712,47 @@ curr_time - gmt_currtime
 ```
 
 
+
+numbers <- 100:150
+numbers
+
+
+
+lapply(numbers, mean)
+
+
+
+sapply(numbers,mean)
+
+
+
+mymat <- matrix(rnorm(16),
+                4,4)
+mymat
+
+
+apply(mymat,1,mean)
+apply(mymat, 2, mean)
+
+apply(mymat,1,sd)
+apply(mymat, 2, sd)
+
+
+numbers  <- c(101:150)
+numbers
+
+length(numbers)
+
+fact <- gl(2,length(numbers)/2)
+fact
+
+
+tapply(numbers, fact, mean)
+tapply(numbers, fact, sd)
+
+
+
+
 ```{r }
 
 ```
@@ -750,6 +791,22 @@ curr_time - gmt_currtime
 ```{r }
 #### Start solution ####
 ```
+
+
+mtr <- matrix(runif(4, min =2, max=4),4,4)
+mtr
+
+row_wise_mean <- apply(mtr,1,mean)
+
+row_wise_mean
+
+
+col_wise_mean <- apply(mtr,2,mean)
+col_wise_mean
+
+
+
+
 
 
 ```{r }
@@ -803,6 +860,38 @@ library(datasets)
 ```{r }
 head(Orange)
 ```
+
+
+
+
+
+Orange
+split_date <- split(Orange,Orange$circumference)
+split_date
+
+sp_date30 <- split_date$`30`
+print(sp_date30)
+
+
+sp_date75 <- split_date$`75`
+print(sp_date75)
+
+sum(sp_date30$age)
+length(sp_date30$age)
+
+
+avg <-  sum(sp_date30$age)/length(sp_date30$age)
+avg
+
+
+split_date <- split(Orange,Orange$circumference)
+
+sp_date214 <- split_date$`214`
+sp_date214
+
+avg <-  sum(sp_date214$age)/length(sp_date214$age)
+avg
+
 
 
 ```{r }
